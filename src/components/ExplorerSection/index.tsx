@@ -9,7 +9,7 @@ export function ExplorerSection() {
       </header>
       <main className="h-[40rem] w-full relative">
         <img
-          src="https://picsum.photos/1000"
+          src="https://source.unsplash.com/random/?naruto,dragonballz"
           alt="cover"
           className="object-cover h-full w-full rounded-xl"
         />
