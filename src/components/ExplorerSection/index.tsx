@@ -7,13 +7,14 @@ export function ExplorerSection() {
           What are you gonna watch today ?
         </span>
       </header>
-      <main className="h-[40rem] w-full relative ">
+      <main className="h-[40rem] w-full relative">
         <img
           src="https://picsum.photos/1000"
           alt="cover"
-          className="object-cover h-full w-full rounded-xl bg-gradient-to-r from-[#1D1d1d00] to-[#1D1d1dcc]"
+          className="object-cover h-full w-full rounded-xl"
         />
-        <div className="absolute bottom-0 w-[55rem] p-[4rem]">
+        <div className="bg-gradient-to-l from-[#1D1d1d00] to-[#1D1d1dcc] absolute z-10 h-full w-full top-0 left-0" />
+        <div className="absolute z-20 bottom-0 w-[55rem] p-[4rem]">
           <h3 className="text-white font-semibold text-[3.6rem] leading-[6.4rem]">
             Weather With You
           </h3>
