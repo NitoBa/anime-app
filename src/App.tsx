@@ -1,15 +1,7 @@
-import { Header } from "./components/Header";
-import { DetailPage } from "./pages/detail";
-import { HomePage } from "./pages/home";
+import { Routes } from "./routes";
 
 function App() {
-  return (
-    <>
-      <Header />
-      {/* <HomePage /> */}
-      <DetailPage />
-    </>
-  );
+  return <Routes />;
 }
 
 export default App;
