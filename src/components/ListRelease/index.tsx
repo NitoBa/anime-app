@@ -1,10 +1,19 @@
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 export function ListRelease() {
   return (
     <div className="flex flex-col gap-[2.4rem]">
       <h4 className="font-semibold text-[3.6rem]">New Realease</h4>
-      <div className="flex gap-[3rem] items-center justify-center w-full overflow-x-scroll">
+      <Splide
+        className="flex gap-[3rem] items-center justify-center w-full"
+        options={{
+          arrows: false,
+          rewind: true,
+          gap: "3rem",
+          perPage: 6,
+        }}
+      >
         {new Array(14).fill(0).map((_) => (
-          <div className="h-[28.4rem] w-[17rem] flex flex-col gap-[.8rem] items-center flex-shrink-0">
+          <SplideSlide className="h-[28.4rem] w-[17rem] flex flex-col gap-[.8rem] items-center flex-shrink-0">
             <div className="h-[25.3rem] w-full relative flex flex-col items-center">
               <img
                 src="https://source.unsplash.com/random/?onepiece,anime"
@@ -16,9 +25,9 @@ export function ListRelease() {
               </div>
             </div>
             <strong className="font-semibold text-center">One Piece</strong>
-          </div>
+          </SplideSlide>
         ))}
-      </div>
+      </Splide>
     </div>
   );
 }
