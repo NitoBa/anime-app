@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 export function Header() {
+  const { pathname } = useLocation();
+
   return (
     <header className="w-ful">
       <div className="px-[8.3rem] pt-[2.4rem] flex items-center justify-between">
@@ -9,14 +11,30 @@ export function Header() {
               Anonime
             </span>
           </Link>
-          <nav className="text-foreground leading-[3.2rem] tracking-[0.07em] text-[1.8rem]">
+          <nav className="leading-[3.2rem] tracking-[0.07em] text-[1.8rem]">
             <ul className="flex items-center gap-[3.2rem]">
-              <li className="hover:text-white cursor-pointer transition-all duration-300">
-                Home
-              </li>
-              <li className="hover:text-white cursor-pointer transition-all duration-300">
-                List anime
-              </li>
+              <Link to="/">
+                <li
+                  className={`${
+                    pathname === "/"
+                      ? "text-white"
+                      : "text-foreground hover:text-white"
+                  }  cursor-pointer transition-all duration-300`}
+                >
+                  Home
+                </li>
+              </Link>
+              <Link to="/list-animes">
+                <li
+                  className={`${
+                    pathname === "/list-animes"
+                      ? "text-white"
+                      : "text-foreground hover:text-white"
+                  }  cursor-pointer transition-all duration-300`}
+                >
+                  List anime
+                </li>
+              </Link>
             </ul>
           </nav>
         </div>
