@@ -13,9 +13,9 @@ export function VideoSection({ title, videoUrl }: VideoProps) {
     lowLatencyMode: true,
   };
   return (
-    <div className="flex flex-col gap-[3.2rem]">
+    <div className="flex flex-col gap-[3.2rem] w-fit">
       <h1 className="font-semibold text-[3.2rem]">{title}</h1>
-      <div className="w-full h-full max-w-[77rem] aspect-video">
+      <div className="h-full w-[77rem] aspect-video">
         <Player>
           <Hls version="latest" config={hlsConfig}>
             <source data-src={videoUrl} type="application/x-mpegURL" />
