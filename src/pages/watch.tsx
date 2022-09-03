@@ -4,7 +4,7 @@ import { VideoSection } from "../components/VideoSection";
 
 export function WatchPage() {
   return (
-    <div className="flex my-[4rem] max-w-[117rem] mx-auto justify-between">
+    <div className="flex my-[4rem] justify-between">
       <div className="flex flex-col gap-[4rem]">
         <VideoSection
           title={"Naruto Clássico - Episode 15"}

@@ -1,8 +1,8 @@
 import { useCallback } from "react";
 import { useQuery } from "react-query";
-import { api } from "../../lib/axios/api";
-import { RecentEpisode } from "../../types/recentEpisode";
-import { CacheQueriesKeys } from "../../utils/cacheQueriesKeys";
+import { api } from "../lib/axios/api";
+import { RecentEpisode } from "../types/recentEpisode";
+import { CacheQueriesKeys } from "../utils/cacheQueriesKeys";
 
 export function useSearchRecentEpisodes() {
   const getRandomAnime = useCallback(async () => {

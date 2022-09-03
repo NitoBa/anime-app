@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Link } from "react-router-dom";
-import { useSearchRecentEpisodes } from "../../hooks/useSearchRecentEpisodes";
+import { useSearchRecentEpisodes } from "../../hooks/useSearchRecentEpisodies";
 import { RecentEpisodeCard } from "../RecentEpisodieCard";
 export function ListRelease() {
   const { data: recentEpisodes, isLoading } = useSearchRecentEpisodes();
