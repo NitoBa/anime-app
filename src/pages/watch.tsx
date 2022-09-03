@@ -2,7 +2,7 @@ import { AnimeBioSection } from "../components/AnimeBio";
 import { PopularAnimeSection } from "../components/PopularAnimeSection";
 import { VideoSection } from "../components/VideoSection";
 
-export function DetailPage() {
+export function WatchPage() {
   return (
     <div className="flex my-[4rem] max-w-[117rem] mx-auto justify-between">
       <div className="flex flex-col gap-[4rem]">

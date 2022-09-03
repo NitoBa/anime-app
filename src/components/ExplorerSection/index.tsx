@@ -16,7 +16,7 @@ export function ExplorerSection() {
       {isLoading ? (
         <div className="h-[40rem] w-full rounded-xl animate-pulse bg-foreground" />
       ) : (
-        <Link to={`/detail/${randomAnime?.id}`}>
+        <Link to={`/watch/${randomAnime?.id}`}>
           <main className="h-[40rem] w-full relative group cursor-pointer overflow-hidden rounded-xl">
             <img
               src={randomAnime?.cover}

@@ -4,7 +4,7 @@ import {
   Routes as RouterProvider,
 } from "react-router-dom";
 import { DefaultLayout } from "./components/DefaultLayout";
-import { DetailPage } from "./pages/detail";
+import { WatchPage } from "./pages/watch";
 import { HomePage } from "./pages/home";
 export function Routes() {
   return (
@@ -12,7 +12,7 @@ export function Routes() {
       <RouterProvider>
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/detail/:id" element={<DetailPage />} />
+          <Route path="/watch/:id" element={<WatchPage />} />
         </Route>
       </RouterProvider>
     </BrowserRouter>

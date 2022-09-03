@@ -1,11 +1,8 @@
-type AnimeTitleObject = {
-    romaji: string,
-    english: string,
-    native: string
-}
+import { AnimeTitle } from "./animeTitle";
+
 export type RandomAnime = {
     id: string;
-    title: AnimeTitleObject;
+    title: AnimeTitle;
     cover: string;
     description: string;
 }
