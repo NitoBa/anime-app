@@ -26,7 +26,9 @@ export function ListRelease() {
               key={episode.id}
               className="h-[28.4rem] w-[17rem] flex flex-col gap-[.8rem] items-center flex-shrink-0 transition-all duration-300 hover:brightness-110 cursor-pointer"
             >
-              <Link to={`/watch/${episode.episodeId}`}>
+              <Link
+                to={`/watch/${episode.id}/${episode.episodeNumber}/${episode.episodeId}`}
+              >
                 <RecentEpisodeCard episode={episode} />
               </Link>
             </SplideSlide>

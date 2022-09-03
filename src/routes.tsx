@@ -12,7 +12,10 @@ export function Routes() {
       <RouterProvider>
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/watch/:id" element={<WatchPage />} />
+          <Route
+            path="/watch/:animeId/:episodeNumber/:episodeId"
+            element={<WatchPage />}
+          />
         </Route>
       </RouterProvider>
     </BrowserRouter>

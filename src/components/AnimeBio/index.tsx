@@ -1,16 +1,29 @@
-export function AnimeBioSection() {
+type AnimeData = {
+  genres: string[];
+  type: string;
+  releaseDate: string;
+  status: string;
+  image?: string;
+  description?: string;
+};
+
+export function AnimeBioSection({
+  type = "",
+  genres = [],
+  releaseDate = "",
+  status = "",
+  image = "",
+  description,
+}: AnimeData) {
   return (
     <section className="flex flex-col gap-[4rem]">
       <div className="flex gap-[3rem]">
-        <img
-          className="w-[27rem] h-[38rem] rounded-xl"
-          src="https://source.unsplash.com/random/?naruto,dragonballz"
-          alt=""
-        />
+        <img className="w-[27rem] h-[38rem] rounded-xl" src={image} />
+
         <div className="flex flex-col gap-[1.2rem]">
           <div className="flex flex-col gap-[0.8rem]">
             <strong className="text-[2rem] font-semibold">Type:</strong>
-            <span className="text-[1.6rem] text-foreground">Tv</span>
+            <span className="text-[1.6rem] text-foreground">{type}</span>
           </div>
           <div className="flex flex-col gap-[0.8rem]">
             <strong className="text-[2rem] font-semibold">
@@ -20,16 +33,18 @@ export function AnimeBioSection() {
           </div>
           <div className="flex flex-col gap-[0.8rem]">
             <strong className="text-[2rem] font-semibold">Release Date:</strong>
-            <span className="text-[1.6rem] text-foreground">2007</span>
+            <span className="text-[1.6rem] text-foreground">{releaseDate}</span>
           </div>
           <div className="flex flex-col gap-[0.8rem]">
             <strong className="text-[2rem] font-semibold">Status:</strong>
-            <span className="text-[1.6rem] text-foreground">Completed</span>
+            <span className="text-[1.6rem] text-foreground">{status}</span>
           </div>
           <div className="flex flex-col gap-[0.8rem]">
             <strong className="text-[2rem] font-semibold">Genres:</strong>
             <span className="text-[1.6rem] text-foreground">
-              Action, Adventure, Fantasy
+              {genres.map(
+                (g, i) => `${g} ${i !== genres.length - 1 ? " | " : ""}`
+              )}
             </span>
           </div>
         </div>
@@ -37,17 +52,7 @@ export function AnimeBioSection() {
 
       <div className="flex flex-col gap-[0.8rem] max-w-[77rem]">
         <strong className="text-[2rem] font-semibold">Description:</strong>
-        <span className="text-[1.6rem] text-foreground">
-          Gol D. Roger was known as the "Pirate King," the strongest and most
-          infamous being to have sailed the Grand Line. The capture and
-          execution of Roger by the World Government brought a change throughout
-          the world. His last words before his death revealed the existence of
-          the greatest treasure in the world, One Piece. It was this revelation
-          that brought about the Grand Age of Pirates, men who dreamed of
-          finding One Piece—which promises an unlimited amount of riches and
-          fame—and quite possibly the pinnacle of glory and the title of the
-          Pirate King.
-        </span>
+        <span className="text-[1.6rem] text-foreground">{description}</span>
       </div>
     </section>
   );
