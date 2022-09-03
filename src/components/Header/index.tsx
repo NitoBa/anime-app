@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 export function Header() {
   return (
     <header className="w-ful">
       <div className="px-[8.3rem] pt-[2.4rem] flex items-center justify-between">
         <div className="flex items-center gap-[9rem]">
-          <span className="text-[3.6rem] leading-[3.2rem] tracking-[0.07em] font-bold">
-            Anonime
-          </span>
+          <Link to="/">
+            <span className="text-[3.6rem] leading-[3.2rem] tracking-[0.07em] font-bold transition-all duration-200 hover:opacity-80">
+              Anonime
+            </span>
+          </Link>
           <nav className="text-foreground leading-[3.2rem] tracking-[0.07em] text-[1.8rem]">
             <ul className="flex items-center gap-[3.2rem]">
               <li className="hover:text-white cursor-pointer transition-all duration-300">
