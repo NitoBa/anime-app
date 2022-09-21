@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { AnimeBioSection } from "../components/AnimeBio";
+import { LoadingSpinner } from "../components/LoadingSpinner";
 import { PopularAnimeSection } from "../components/PopularAnimeSection";
 import { VideoSection } from "../components/VideoSection";
 import { useWatchAnime } from "../hooks/useWatchAnime";
@@ -16,7 +17,11 @@ export function WatchPage() {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="h-[70rem] w-full flex items-center justify-center">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   return (
@@ -27,7 +32,7 @@ export function WatchPage() {
           videoUrl={data?.episode.episodeUrl ?? ""}
         />
         <AnimeBioSection
-          type={"undefined"}
+          type={data?.animeData.type!}
           genres={data?.animeData.genres!}
           releaseDate={data?.animeData.releaseDate!}
           status={data?.animeData.status!}

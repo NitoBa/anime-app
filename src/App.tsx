@@ -5,7 +5,7 @@ import { Routes } from "./routes";
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Routes />;
+      <Routes />
     </QueryClientProvider>
   );
 }
