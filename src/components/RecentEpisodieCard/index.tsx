@@ -6,7 +6,7 @@ type Props = {
 
 export function RecentEpisodeCard({ episode }: Props) {
   return (
-    <>
+    <div className="flex flex-col items-center">
       <div className="h-[25.3rem] w-full relative flex flex-col items-center">
         <img
           src={episode.image}
@@ -17,11 +17,11 @@ export function RecentEpisodeCard({ episode }: Props) {
           <span className="">Episode {episode.episodeNumber}</span>
         </div>
       </div>
-      <strong className="font-semibold text-center">
+      <strong className="font-semibold text-center w-full">
         {episode?.title.romaji ??
           episode?.title.english ??
           episode?.title.native}
       </strong>
-    </>
+    </div>
   );
 }

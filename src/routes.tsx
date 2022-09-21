@@ -6,6 +6,7 @@ import {
 import { DefaultLayout } from "./components/DefaultLayout";
 import { WatchPage } from "./pages/watch";
 import { HomePage } from "./pages/home";
+import { ListAnimesPage } from "./pages/list-animes";
 export function Routes() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ export function Routes() {
             path="/watch/:animeId/:episodeNumber/:episodeId"
             element={<WatchPage />}
           />
+          <Route path="/list-animes" element={<ListAnimesPage />} />
         </Route>
       </RouterProvider>
     </BrowserRouter>

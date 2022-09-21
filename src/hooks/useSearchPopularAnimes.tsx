@@ -5,14 +5,14 @@ import { PopularAnime } from "../types/popularAnime";
 import { CacheQueriesKeys } from "../utils/cacheQueriesKeys";
 
 export function useSearchPopularAnimes() {
-  const getRandomAnime = useCallback(async () => {
+  const getPopularAnimes = useCallback(async () => {
     const { data } = await api.get("/popular");
     return data.results as PopularAnime[];
   }, []);
 
   const { data, isLoading, error } = useQuery(
     [CacheQueriesKeys.SEARCH_POPULAR_ANIMES],
-    getRandomAnime
+    getPopularAnimes
   );
 
   return { data, isLoading, error };
